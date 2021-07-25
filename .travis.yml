@@ -7,4 +7,4 @@ before_install:
   - docker build -t shubham/frontend-docker -f Dockerfile.dev .
 
 script:
-  - docker run shubham/frontend-docker CI=true npm run test -- --coverage
+  - docker run -e CI=true shubham/frontend-docker npm run test -- --coverage
